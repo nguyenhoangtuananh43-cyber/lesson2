@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<p id="result"></p>
+<button onclick="myFunction()">vui lòng nhập bán kính </button>
+<script>
+    function myFunction() {
+        let r = parseInt(prompt('nhập bán kính đường tròn'))
+        if (isNaN(r) || r < 0) {
+            document.getElementById('result').innerHTML = 'Vui lòng nhập lại bán kính !'
+            return
+        }
+        const pi = 3.14
+        let s = pi * r * r
+        let p = 2*pi*r
+        document.write('s=' + s);
+        document.write('p=' +p);
+    }
+</script>
+</body>
+</html>
