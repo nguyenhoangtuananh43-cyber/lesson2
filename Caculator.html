@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="So1"></label><input type="text" id="So1" name="So1" placeholder="Nhập số thứ nhất">
+<label for="So2"></label><input type="text" id="So2" name="So2" placeholder="Nhập số thứ hai">
+<button onclick="Add()">Cộng</button>
+<button onclick="Sub()">trừ</button>
+<button onclick="Mult()">nhân</button>
+<button onclick="Div()">chia</button>
+<p id="result"><strong>Result</strong></p>
+<script>
+    function Add() {
+        let So1 = parseFloat(document.getElementById('So1').value);
+        let So2 = parseFloat(document.getElementById('So2').value);
+        let result = So1 + So2;
+        document.getElementById('result').innerHTML = result;
+    }
+    function Sub() {
+        let So1 = parseFloat(document.getElementById('So1').value);
+        let So2 = parseFloat(document.getElementById('So2').value);
+        let result = So1 - So2;
+        document.getElementById('result').innerHTML = result;
+    }
+    function Mult() {
+        let So1 = parseFloat(document.getElementById('So1').value);
+        let So2 = parseFloat(document.getElementById('So2').value);
+        let result = So1 * So2;
+        document.getElementById('result').innerHTML = result;
+    }
+    function Div() {
+        let So1 = parseFloat(document.getElementById('So1').value);
+        let So2 = parseFloat(document.getElementById('So2').value);
+        if (So2===0){
+            document.getElementById('result').innerHTML ='không thể chia cho 0 ';
+        }
+        else{
+            let result = So1 / So2;
+            document.getElementById('result').innerHTML = result
+        }
+    }
+</script>
+
+</body>
+</html>
