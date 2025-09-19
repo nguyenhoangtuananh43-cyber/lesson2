@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h2>NHập số tháng từ (1-12)</h2>
+<input type="number" id="month" min="1" max="12" placeholder="nhập tháng">
+<button onclick="tinhNgay()">Tính số ngày</button>
+<p id="kết quả"></p>
+<script>
+    function tinhNgay() {
+        let month = parseFloat(document.getElementById("month").value);
+        let ketqua = "";
+
+        switch (month) {
+            case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+                ketqua = "Tháng " + month + " có 31 ngày";
+                break;
+            case 4: case 6: case 9: case 11:
+                ketqua = "Tháng " + month + " có 30 ngày";
+                break;
+            case 2:
+                ketqua = "Tháng 2 có 28 hoặc 29 ngày";
+                break;
+            default:
+                ketqua = "Vui lòng nhập tháng từ 1 đến 12!";
+        }
+        document.getElementById("kết quả").innerHTML = ketqua
+    }
+
+</script>
+</body>
+</html>
