@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #no {
+            position: absolute;
+            left: 50px;
+            top: 50px;
+            padding: 5px 10px;
+            background: deepskyblue;
+            color: black;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h2>Do you love me</h2>
+<button id="yes" onclick="sayYes()">Yes</button>
+<button id="no" onmouseover="sayNo()">No</button>
+<script>
+    function sayYes() {
+        alert("<3");
+    }
+    function sayNo() {
+        const no = document.getElementById("no");
+        const x= Math.random()*(window.innerWidth - no.offsetWidth);
+        const y= Math.random()*(window.innerHeight - no.offsetHeight);
+        no.style.left = x+'px';
+        no.style.top = y+'px';
+    }
+
+</script>
+</body>
+</html>
