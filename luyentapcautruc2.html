@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="nhaptuoi">nhập tuổi</label>
+<input type="number" id="nhaptuoi" name="nhaptuoi"><br><br>
+<p id="ketqua"></p>
+<button onclick="ketqua()">kết quả</button>
+<script>
+    function ketqua(){
+let nhaptuoi =parseInt(document.getElementById('nhaptuoi').value);
+if ( nhaptuoi == 14){
+    document.getElementById('ketqua').innerHTML= 'bạn học vượt cấp vào lơp 10'
+}else if(nhaptuoi >= 15 && nhaptuoi <= 18){
+    document.getElementById('ketqua').innerHTML = 'đủ điều kiện vào lớp 10'
+}else {
+    document.getElementById('ketqua').innerHTML = 'bạn đã ngoài độ tuổi vào lớp 10'
+}
+    }
+</script>
+</body>
+</html>
