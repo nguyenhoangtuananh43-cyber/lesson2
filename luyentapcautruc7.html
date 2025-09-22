@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h2>Tính cước điện thoại hộ gia đình</h2>
+
+<label for="noi">Số phút gọi nội mạng:</label>
+<input type="number" id="noi" step="1"><br><br>
+
+<label for="ngoai">Số phút gọi ngoại mạng:</label>
+<input type="number" id="ngoai" step="1"><br><br>
+
+<p id="ketqua"></p>
+<button onclick="tinhCuoc()">Tính cước</button>
+
+<script>
+    function tinhCuoc() {
+        let noi = parseInt(document.getElementById("noi").value) || 0;
+        let ngoai = parseInt(document.getElementById("ngoai").value) || 0;
+
+        let phiThueBao = 25000;
+        let cuoc = phiThueBao + noi*600 + ngoai*1200 ;
+
+        document.getElementById("ketqua").innerHTML =
+            "Tổng cước phải trả: " + cuoc.toLocaleString() + " VNĐ";
+    }
+</script>
+</body>
+</html>
