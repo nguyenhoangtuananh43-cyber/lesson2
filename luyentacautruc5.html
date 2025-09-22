@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h2>Xếp loại học lực học sinh </h2>
+<br><br>
+<label for = "kt">Điểm kiểm tra</label>
+<input type="number" id="kt" step="0.1">
+<br><br>
+<label for = 'gk'>Điểm giữa kì </label>
+<input type="number" id="gk" step="0.1">
+<br><br>
+<label for ="ck">Điểm cuối kì </label>
+<input type="number" id="ck" step="0.1">
+<p id = 'xeploai'></p>
+<button onclick="xeploai()">Kiểm tra</button>
+<script>
+    function xeploai() {
+    let kt = parseFloat(document.getElementById("kt").value);
+    let gk = parseFloat(document.getElementById("gk").value);
+    let ck = parseFloat(document.getElementById("ck").value);
+    let ĐTB = ( kt + gk*2 + ck*3)/6
+            let xephang = ''
+    if ( ĐTB >=8){
+        xephang = 'Xếp hạng giỏi';
+    } else if (ĐTB >=6.5){
+        xephang = 'xếp hạng khá'
+    }else if (ĐTB >=5){
+        xephang = 'xếp hạng trung bình'
+    }else if (ĐTB >= 3.5){
+        xephang = 'xếp hạng yếu'
+    }else{
+        xephang = ' xếp hạng kém '
+    }
+document.getElementById("xeploai").innerHTML = "ĐTB là: "+ĐTB +'<br>' + 'Xếp hạng:'+xephang
+    }
+</script>
+</body>
+</html>
