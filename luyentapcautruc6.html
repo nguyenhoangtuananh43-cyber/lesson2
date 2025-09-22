@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h2>Tính hoa hồng nhân viên</h2>
+
+<label for="ds">Nhập doanh số bán hàng (VNĐ):</label>
+<input type="number" id="ds" step="1000"><br><br>
+
+<p id="ketqua"></p>
+<button onclick="tinhHoaHong()">Tính hoa hồng</button>
+
+<script>
+    function tinhHoaHong() {
+        let ds = parseFloat(document.getElementById("ds").value);
+        let hoahong = 0;
+
+        if (ds < 5000000) {
+            hoahong = ds * 0.03;
+        } else if (ds < 10000000) {
+            hoahong = ds * 0.05;
+        } else if (ds < 20000000) {
+            hoahong = ds * 0.10;
+        } else {
+            hoahong = ds * 0.15;
+        }
+
+        document.getElementById("ketqua").innerHTML =
+            "Doanh số: " + ds.toLocaleString() + " VNĐ<br>" +
+            "Hoa hồng nhận được: " + hoahong.toLocaleString() + " VNĐ";
+    }
+</script>
+</body>
+</html>
