@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<label for="songuyen">Nhập số nguyên</label>
+<input type="number" id="songuyen"><br><br>
+<p id ='kiemtra'></p>
+<button onclick="kiemtra()"> Kiểm tra </button>
+<script>
+    function kiemtra(){
+        let songuyen = parseInt(document.getElementById('songuyen').value);
+        if (songuyen > 0 ){
+            document.getElementById('kiemtra').innerHTML ='Đây là số nguyên dương'
+        }else if (songuyen < 0){
+            document.getElementById('kiemtra').innerHTML='Đây là số nguyên âm'
+        }else{
+            document.getElementById('kiemtra').innerHTML='Đây là số 0'
+        }
+    }
+</script>
+</body>
+</html>
